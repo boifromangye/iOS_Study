@@ -116,4 +116,7 @@ print(10 / 3)
 print(10 % 2)
 
 // 단항 음수 연산자
-
+var someInt : Int
+let someInt2 = 100
+someInt = -someInt2
+print(someInt)
