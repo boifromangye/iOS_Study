@@ -49,6 +49,14 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func btnClear(_ sender: UIButton) {
+        tfNum1.text?.removeAll()
+        tfNum2.text?.removeAll()
+        tfResult.text?.removeAll()
+        lblMsg.text?.removeAll()
+        tfNum1.becomeFirstResponder()
+    }
+    
     func isNil(str : String) -> Bool{
         if str.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             return true
