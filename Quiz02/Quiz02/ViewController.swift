@@ -21,12 +21,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //결과 부분 TextField를 Read Only로 변경
+        resultPl.isUserInteractionEnabled = false
     }
 
     @IBAction func btnResult(_ sender: UIButton) {
         self.view.endEditing(true)
         
         if firstNum.text!.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || secondNum.text!.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            firstNum.becomeFirstResponder() // 커서 위치 조정
             lblWarning.text = "숫자를 확인하세요!"
         }
         else {
@@ -58,6 +62,7 @@ class ViewController: UIViewController {
         resultQ.text?.removeAll()
         resultR.text?.removeAll()
         lblWarning.text?.removeAll()
+        firstNum.becomeFirstResponder()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
