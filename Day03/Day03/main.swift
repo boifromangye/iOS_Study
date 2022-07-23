@@ -51,3 +51,9 @@ if num % 2 == 0{
     print("Odd")
 }
 
+// 삼항 조건 연산자
+let contentHeight1 = 40
+let hasHeader1 = true
+let rowHeight1 = contentHeight1 + (hasHeader ? 50 : 20)
+
+print(rowHeight1)
