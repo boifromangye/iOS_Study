@@ -22,3 +22,13 @@ if name == "world"{
 } else{
     print("I'm sorry, \(name).")
 }
+
+print((1, "zebra") < (2, "apple"))
+print((3, "apple") < (3, "bird"))
+print("a" < "b") // "가" < "나"
+print((4, "dog") == (4, "dog"))
+print(("blue", -1) < ("purple", 1))
+print(true == false) // Binary operator '>' cannot be applied to two 'Bool' operands
+
+// 일반 조건 연산자
+
