@@ -22,9 +22,12 @@ class ViewController: UIViewController {
     @IBAction func btnAdd(_ sender: UIButton) {
         self.view.endEditing(true)
 
+        // Optional Unwrapping
+        
         guard let num1 = tfNum1.text else {return}
         guard let num2 = tfNum2.text else {return}
         
+        //Check input
         if isNil(str: num1){
             lblMsg.text = "1번 숫자를 확인하세요!"
             tfNum1.becomeFirstResponder()
@@ -33,7 +36,7 @@ class ViewController: UIViewController {
                 lblMsg.text = "2번 숫자를 확인하세요!"
                 tfNum2.becomeFirstResponder()
             }else{
-                if isEven(str: num1) {
+                if isEven(str: num1) { // Even Decision
                     if isEven(str: num2) {
                         tfResult.text = addition(str1: num1, str2: num2)
                         lblMsg.text = "계산이 완료되었습니다."
@@ -80,5 +83,4 @@ class ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-}
-
+} // ViewController
