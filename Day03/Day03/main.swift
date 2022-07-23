@@ -64,3 +64,26 @@ var userDefinedColorName : String? // Optional 변수
 
 var colorNameToUse = userDefinedColorName ?? defaultColorName
 print(colorNameToUse)
+
+// 범위 연산자
+print(1...10)
+
+for i in 1...5{
+    print(i)
+}
+
+var sum = 0
+for i in 1...10000{
+    sum += i
+}
+print("- \(sum) -")
+
+// 구구단 5단 출력
+for r in 1..<10{
+    print("5 X \(r) = \(5*r)")
+}
+
+let names = ["Kwon", "Kim", "Park", "Lee"] // Collection
+for i in 0..<names.count{ // 반닫힌 범위 연산자
+    print("Person \(i+1) : \(names[i])")
+}
