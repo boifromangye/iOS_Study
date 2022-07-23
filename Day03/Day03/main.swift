@@ -31,4 +31,23 @@ print(("blue", -1) < ("purple", 1))
 print(true == false) // Binary operator '>' cannot be applied to two 'Bool' operands
 
 // 일반 조건 연산자
+let contentHeight = 40
+let hasHeader = true
+let rowHeight : Int
+
+if hasHeader{
+    rowHeight = contentHeight + 50
+}else{
+    rowHeight = contentHeight + 20
+}
+print(rowHeight)
+
+// 홀짝수 판별
+let num = 10
+
+if num % 2 == 0{
+    print("Even")
+}else{
+    print("Odd")
+}
 
