@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         guard let num1 = tfNum1.text else {return}
         guard let num2 = tfNum2.text else {return}
         
-        if isNil(str: num1) {
+        if isNil(str: num1){
             lblMsg.text = "1번 숫자를 확인하세요!"
             tfNum1.becomeFirstResponder()
         } else{
@@ -33,8 +33,18 @@ class ViewController: UIViewController {
                 lblMsg.text = "2번 숫자를 확인하세요!"
                 tfNum2.becomeFirstResponder()
             }else{
-                tfResult.text = evenAddition(str1: num1, str2: num2)
-                lblMsg.text = "계산이 완료되었습니다."
+                if isEven(str: num1) {
+                    if isEven(str: num2) {
+                        tfResult.text = addition(str1: num1, str2: num2)
+                        lblMsg.text = "계산이 완료되었습니다."
+                    }else{
+                        lblMsg.text = "2번 숫자는 홀수입니다."
+                        tfNum2.becomeFirstResponder()
+                    }
+                }else{
+                    lblMsg.text = "1번 숫자는 홀수입니다."
+                    tfNum1.becomeFirstResponder()
+                }
             }
         }
     }
@@ -47,7 +57,15 @@ class ViewController: UIViewController {
         }
     }
     
-    func evenAddition(str1:String, str2:String) -> String{
+    func isEven(str : String) -> Bool{
+        if Int(str)! % 2 == 0{
+            return true
+        }else{
+            return false
+        }
+    }
+    
+    func addition(str1:String, str2:String) -> String{
         return String(Int(str1)! + Int(str2)!)
     }
 }
