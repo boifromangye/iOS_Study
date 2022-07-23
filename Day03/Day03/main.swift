@@ -87,3 +87,27 @@ let names = ["Kwon", "Kim", "Park", "Lee"] // Collection
 for i in 0..<names.count{ // 반닫힌 범위 연산자
     print("Person \(i+1) : \(names[i])")
 }
+
+// 논리 연산자
+// 논리 부정 연산자
+let allowEntry = false
+if !allowEntry {
+    print("Access Denied")
+}
+
+// 논리 곱 연산자 - And
+let enteredDoorCode = true
+let passedRetinaScan = false
+if enteredDoorCode && passedRetinaScan {
+    print("WELCOME!")
+}else{
+    print("Access Denied")
+}
+
+// 논리 합 연산자 - Or
+if enteredDoorCode || passedRetinaScan {
+    print("WELCOME!")
+}else{
+    print("Access Denied")
+}
+
