@@ -36,7 +36,8 @@ class ViewController: UIViewController {
                 lblMsg.text = "2번 숫자를 확인하세요!"
                 tfNum2.becomeFirstResponder()
             }else{
-                if isEven(str: num1) { // Even Decision
+                // Even Decision
+                if isEven(str: num1) {
                     if isEven(str: num2) {
                         tfResult.text = addition(str1: num1, str2: num2)
                         lblMsg.text = "계산이 완료되었습니다."
@@ -60,6 +61,7 @@ class ViewController: UIViewController {
         tfNum1.becomeFirstResponder()
     }
     
+    // Reusable functions
     func isNil(str : String) -> Bool{
         if str.isEmpty {
             return true
