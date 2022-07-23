@@ -68,5 +68,9 @@ class ViewController: UIViewController {
     func addition(str1:String, str2:String) -> String{
         return String(Int(str1)! + Int(str2)!)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
 
