@@ -35,6 +35,12 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func btnClear(_ sender: UIButton) {
+        tfNum.text?.removeAll()
+        lblResult.text?.removeAll()
+        tfNum.becomeFirstResponder()
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
