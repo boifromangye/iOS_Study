@@ -33,6 +33,13 @@ class ViewController: UIViewController {
         lblResult.text = "결과 : \(rangeAddition(start: startNum, end: endNum))"
     }
     
+    @IBAction func btnClear(_ sender: UIButton) {
+        tfNumStart.text?.removeAll()
+        tfNumEnd.text?.removeAll()
+        lblResult.text?.removeAll()
+        tfNumStart.becomeFirstResponder()
+    }
+    
     func isNil(str:String) -> String{
         if str.isEmpty {
             return "0"
