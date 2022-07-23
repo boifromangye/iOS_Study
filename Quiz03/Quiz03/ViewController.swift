@@ -35,7 +35,7 @@ class ViewController: UIViewController {
             lblResult.text = "숫자를 확인하세요!"
         }
 /*
-        if tfNum.text!.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+        if tfNum.text!.isEmpty {
             tfNum.becomeFirstResponder()
             lblResult.text = "숫자를 확인하세요!"
         }

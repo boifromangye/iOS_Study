@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         guard let num1 = tfNum1.text else {return}
         guard let num2 = tfNum2.text else {return}
         
-        //Check input
+        // Check input
         if isNil(str: num1){
             lblMsg.text = "1번 숫자를 확인하세요!"
             tfNum1.becomeFirstResponder()
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
     }
     
     func isNil(str : String) -> Bool{
-        if str.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+        if str.isEmpty {
             return true
         } else{
             return false
