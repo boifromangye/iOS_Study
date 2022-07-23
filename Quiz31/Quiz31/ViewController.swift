@@ -38,11 +38,11 @@ class ViewController: UIViewController {
                         tfResult.text = addition(str1: num1, str2: num2)
                         lblMsg.text = "계산이 완료되었습니다."
                     }else{
-                        lblMsg.text = "2번 숫자는 홀수입니다."
+                        lblMsg.text = "2번 숫자는 홀수입니다.(\(num2))"
                         tfNum2.becomeFirstResponder()
                     }
                 }else{
-                    lblMsg.text = "1번 숫자는 홀수입니다."
+                    lblMsg.text = "1번 숫자는 홀수입니다.(\(num1))"
                     tfNum1.becomeFirstResponder()
                 }
             }
