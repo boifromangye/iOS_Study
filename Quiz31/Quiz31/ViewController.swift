@@ -33,7 +33,7 @@ class ViewController: UIViewController {
                 lblMsg.text = "2번 숫자를 확인하세요!"
                 tfNum2.becomeFirstResponder()
             }else{
-                tfResult.text = addition(str1: num1, str2: num2)
+                tfResult.text = evenAddition(str1: num1, str2: num2)
                 lblMsg.text = "계산이 완료되었습니다."
             }
         }
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func addition(str1:String, str2:String) -> String{
+    func evenAddition(str1:String, str2:String) -> String{
         return String(Int(str1)! + Int(str2)!)
     }
 }
