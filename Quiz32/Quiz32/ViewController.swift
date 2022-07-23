@@ -40,6 +40,7 @@ class ViewController: UIViewController {
         tfNumStart.becomeFirstResponder()
     }
     
+    // Check Nil
     func isNil(str:String) -> String{
         if str.isEmpty {
             return "0"
@@ -48,6 +49,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // Compare 2 numbers
     func compareNum(start:String, end:String) -> Bool{
         let num1 = Int(start)!
         let num2 = Int(end)!
@@ -59,6 +61,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // Sum in a range
     func rangeAddition(start:String, end:String) -> Int{
         let num1 = Int(start)!
         let num2 = Int(end)!
