@@ -57,3 +57,10 @@ let hasHeader1 = true
 let rowHeight1 = contentHeight1 + (hasHeader ? 50 : 20)
 
 print(rowHeight1)
+
+// Nil 병합 연산자
+let defaultColorName = "red"
+var userDefinedColorName : String? // Optional 변수
+
+var colorNameToUse = userDefinedColorName ?? defaultColorName
+print(colorNameToUse)
