@@ -29,7 +29,8 @@ class ViewController: UIViewController {
         let numCheck = chekNil(str: num)
         
         if numCheck == 1 {
-            <#code#>
+            //홀짝수 판별 함수 생성
+            print(numberDecision(str : num))
         } else{
             lblResult.text = "숫자를 확인하세요!"
         }
@@ -64,6 +65,14 @@ class ViewController: UIViewController {
             return 0
         }else{
             return 1
+        }
+    }
+    
+    func numberDecision(str : String) -> String{
+        if Int(str)! % 2 == 0 {
+            return "입력하신 숫자는 짝수입니다."
+        } else{
+            return "입력하신 숫자는 홀수입니다."
         }
     }
 } // ViewController
