@@ -16,15 +16,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        lblArr.text?.removeAll()
         for i in arr {
             lblArr.text! += i
         }
         lblEmoji.text = arr[0]
     }
+    
     @IBAction func btnPlay(_ sender: UIButton) {
         cnt += 1
-
         lblEmoji.text = arr[cnt%arr.count]
     }
 }
