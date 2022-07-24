@@ -94,4 +94,19 @@ intVariable1.removeAll()
 intVariable1 = []
 print(intVariable1.count)
 
+// 기본값으로 설정된 배열 생성
+var fiveDoubles1 : [Double] = [0.0, 0.0, 0.0, 0.0, 0.0]
+var fiveDoubles2 = Array(repeating: 0.0, count: 5)
+var fiveDoubles3 = Array(repeating: 2.5, count: 5)
 
+// 배열 합치기
+var tenDoubles = fiveDoubles1 + fiveDoubles3
+print(tenDoubles)
+
+// 배열 더하기
+var fiveSumDoubles : [Double] = []
+
+for i in 0..<fiveDoubles1.count{
+    fiveSumDoubles.append(fiveDoubles1[i] + fiveDoubles3[i])
+}
+print(fiveSumDoubles)
