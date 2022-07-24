@@ -68,5 +68,30 @@ var intVariable3 : [Int] = []
 var intVariable4 = [1, 2, 3]
 
 // Add Data
+intVariable1.append(10)
 intVariable1.append(1)
+intVariable1.append(100)
+
 print(intVariable1)
+
+// Calculate
+print(intVariable1.contains(100))
+print(intVariable1.contains(3))
+
+// Print
+print(intVariable1[0] + intVariable1[2])
+print(intVariable1[0...2])
+
+// Edit
+intVariable1[0] = 999
+print(intVariable1)
+
+// Delete
+intVariable1.remove(at: 1)
+print(intVariable1)
+intVariable1.removeLast()
+intVariable1.removeAll()
+intVariable1 = []
+print(intVariable1.count)
+
+
