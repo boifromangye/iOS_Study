@@ -16,8 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        lblFileName.text = imgArr[cnt]
-        imgFlower.image = UIImage(named: imgArr[cnt])
+        displayImg()
     }
 
     @IBAction func btnPrev(_ sender: UIButton) {
@@ -25,12 +24,15 @@ class ViewController: UIViewController {
             cnt = imgArr.count
         }
         cnt -= 1
-        lblFileName.text = imgArr[cnt%imgArr.count]
-        imgFlower.image = UIImage(named: imgArr[cnt%imgArr.count])
+        displayImg()
     }
     
     @IBAction func btnNext(_ sender: UIButton) {
         cnt += 1
+        displayImg()
+    }
+    
+    func displayImg() {
         lblFileName.text = imgArr[cnt%imgArr.count]
         imgFlower.image = UIImage(named: imgArr[cnt%imgArr.count])
     }
