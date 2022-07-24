@@ -59,3 +59,14 @@ yourName2 = nil
  2) Dictionary : key와 value의 쌍으로 이루어진 컬렉션
  3) Set : 순서와 중복 데이터가 없는 집합 연산
  */
+
+// Array
+// 빈 정수형 배열 생성
+var intVariable1 : Array<Int> = Array<Int>() // < > : Generic
+var intVariable2 : [Int] = [Int]()
+var intVariable3 : [Int] = []
+var intVariable4 = [1, 2, 3]
+
+// Add Data
+intVariable1.append(1)
+print(intVariable1)
