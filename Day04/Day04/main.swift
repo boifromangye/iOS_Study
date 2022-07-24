@@ -49,3 +49,13 @@ print(yourName2!)
 
 yourName2 = nil
 //print(yourName2!)
+
+// --------------
+// Collection
+// --------------
+/*
+ - 여러 값들을 묶어서 하나의 변수로 사용
+ 1) Array : 순서가 있는 리스트 컬렉션
+ 2) Dictionary : key와 value의 쌍으로 이루어진 컬렉션
+ 3) Set : 순서와 중복 데이터가 없는 집합 연산
+ */
