@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         if cnt % 2 == 0 {
             lblMsg.text = "Welcome!"
         } else {
-            lblMsg.text = "Welcome! 권태우)"
+            lblMsg.text = "Welcome! 권태우"
         }
     }
     
