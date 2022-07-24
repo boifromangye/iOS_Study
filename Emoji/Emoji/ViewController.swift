@@ -26,5 +26,13 @@ class ViewController: UIViewController {
         cnt += 1
         lblEmoji.text = arr[cnt%arr.count]
     }
+    
+    @IBAction func btnPrev(_ sender: UIButton) {
+        if cnt <= 0 {
+            cnt = arr.count
+        }
+        cnt -= 1
+        lblEmoji.text = arr[cnt%arr.count]
+    }
 }
 
