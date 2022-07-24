@@ -110,3 +110,57 @@ for i in 0..<fiveDoubles1.count{
     fiveSumDoubles.append(fiveDoubles1[i] + fiveDoubles3[i])
 }
 print(fiveSumDoubles)
+
+// 문자를 이용한 배열의 생성
+var shoppingList1 : [String] = ["Eggs", "Milk"]
+print(shoppingList1)
+
+var shoppingList2 : [String] = [String](repeating: "Pencil", count: 3)
+print(shoppingList2)
+
+for i in 0..<shoppingList1.count{
+    print(shoppingList1[i])
+}
+
+for i in shoppingList1{
+    print(i)
+}
+
+for i in ["a", "b", "c"]{
+    print(i)
+}
+
+print("The shopping list contains \(shoppingList1.count) items.")
+
+//shoppingList1 = []
+if shoppingList1.isEmpty {
+    print("The shopping list is empty.")
+} else{
+    print("The shopping list contains \(shoppingList1.count) items.")
+}
+
+// 배열에 데이터 추가
+shoppingList1.append("Flour")
+print(shoppingList1.count, shoppingList1)
+
+shoppingList1 += ["Butter"]
+print(shoppingList1.count, shoppingList1)
+
+shoppingList1 += ["Coke", "Chocolate", "Cheese"]
+print(shoppingList1.count, shoppingList1)
+
+// 배열의 특정 위치 데이터 불러오기
+var firstItem = shoppingList1[0]
+print(firstItem)
+
+// 배열의 특정 위치 변경 및 제거
+shoppingList1[4...6] = ["Beer", "Candy"]
+print(shoppingList1.count, shoppingList1)
+
+// 배열의 특정 위치 데이터 추가
+shoppingList1.insert("Soju", at: 0)
+print(shoppingList1.count, shoppingList1)
+
+for (index, value) in shoppingList1.enumerated(){
+    print("Item \(index+1) : \(value)")
+}
