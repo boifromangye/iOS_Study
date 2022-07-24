@@ -45,14 +45,8 @@ class ViewController: UIViewController {
         if cnt <= 0 {
             cnt = imgArr.count
         }
-        if cnt >= imgArr.count {
-            cnt = 0
-        }
-        if cntPre <= 0 {
-            cntPre = imgArr.count
-        }
-        if cntPre >= imgArr.count {
-            cntPre = 0
+        if cntPre <= 1 {
+            cntPre = imgArr.count+1
         }
     }
 }
