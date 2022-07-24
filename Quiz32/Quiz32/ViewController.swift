@@ -21,14 +21,14 @@ class ViewController: UIViewController {
     @IBAction func btnAdd(_ sender: UIButton) {
         guard var startNum = tfNumStart.text else { return }
         guard var endNum = tfNumEnd.text else { return }
-        var a : String
+        var temp : String
 
         startNum = isNil(str: startNum)
         endNum = isNil(str: endNum)
         if !compareNum(start: startNum, end: endNum){
-            a = startNum
+            temp = startNum
             startNum = endNum
-            endNum = a
+            endNum = temp
         }
         lblResult.text = "결과 : \(rangeAddition(start: startNum, end: endNum))"
     }
