@@ -164,3 +164,22 @@ print(shoppingList1.count, shoppingList1)
 for (index, value) in shoppingList1.enumerated(){
     print("Item \(index+1) : \(value)")
 }
+
+// 배열의 합계 구하기 및 최대값 찾기
+let arr = [1, 23, 25, 77, 9, 40, 39, 21]
+
+var total = 0
+for i in arr{
+    total += i
+}
+print(total)
+
+var max = arr[0]
+for i in arr{
+    if max < i {
+        max = i
+    }
+}
+print("The maximum value is \(max).")
+
+print(arr.max()!)
