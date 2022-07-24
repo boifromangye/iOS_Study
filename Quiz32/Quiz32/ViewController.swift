@@ -19,12 +19,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnAdd(_ sender: UIButton) {
-        guard var startNum = tfNumStart.text else { return }
-        guard var endNum = tfNumEnd.text else { return }
+        // Check Nil
+        var startNum = tfNumStart.text ?? "0"
+        var endNum = tfNumEnd.text ?? "0"
         var temp : String
 
-        startNum = isNil(str: startNum)
-        endNum = isNil(str: endNum)
+//        startNum = isNil(str: startNum)
+//        endNum = isNil(str: endNum)
         if !compareNum(start: startNum, end: endNum){
             temp = startNum
             startNum = endNum
@@ -41,6 +42,7 @@ class ViewController: UIViewController {
     }
     
     // Check Nil
+    /*
     func isNil(str:String) -> String{
         if str.isEmpty {
             return "0"
@@ -48,6 +50,7 @@ class ViewController: UIViewController {
             return str
         }
     }
+    */
     
     // Compare 2 numbers
     func compareNum(start:String, end:String) -> Bool{
@@ -61,7 +64,7 @@ class ViewController: UIViewController {
         }
     }
     
-    // Sum in a range
+    // Sum in range
     func rangeAddition(start:String, end:String) -> Int{
         let num1 = Int(start)!
         let num2 = Int(end)!
@@ -73,5 +76,5 @@ class ViewController: UIViewController {
         
         return sum
     }
-}
+} // ViewController
 
