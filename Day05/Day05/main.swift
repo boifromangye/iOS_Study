@@ -66,3 +66,22 @@ print(houseAnimals.isSubset(of: farmAnimals))
 print(farmAnimals.isSuperset(of: houseAnimals))
 print(farmAnimals.isDisjoint(with: cityAnimals))
 
+/*
+열거형(Enumerate)
+ - 연관된 항목들을 묶어서 표현할 수 있는 타입
+ - 배열, 딕셔너리, 셋과는 다르게 프로그래머가 정의해준 항목값 외에는 추가, 수정이 불가
+ - 분석에서 사용하는 용어인 범주(category)와 동일한 의미
+ */
+
+enum School: String{
+    case primary = "유치원"
+    case elementary = "초등학교"
+    case middle = "중학교"
+    case high = "고등학교"
+    case college = "대학"
+    case university = "대학교"
+    case graduate = "대학원"
+}
+
+let highestEducation: School = .university
+print("저의 최종학력은 \(highestEducation.rawValue) 졸업입니다. ")
