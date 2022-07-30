@@ -357,3 +357,8 @@ for string in strings{
         print(string)
     }
 }
+
+// Swift stuff
+for string in strings where string.starts(with: "F"){
+    print(string)
+}
