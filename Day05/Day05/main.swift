@@ -390,3 +390,29 @@ for i in 1...100{
 
 print(arr)
 
+// While
+
+var startIndex = 0
+var endIndex = 100
+var total = 0
+
+while startIndex <= endIndex{
+    total += startIndex
+    startIndex += 1
+}
+
+print(total)
+
+// while문을 이용하여 1부터 100까지 수 중 짝수의 합을 구하시오.
+// 단, if문 사용하지 말 것
+
+var 숫자 = 1
+var 끝 = 50
+var 짝수합 = 0
+
+while 숫자 <= 끝{
+    짝수합 += 숫자*2
+    숫자 += 1
+}
+
+print(짝수합)
