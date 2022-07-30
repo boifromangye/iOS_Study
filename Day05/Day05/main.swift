@@ -85,3 +85,30 @@ enum School: String{
 
 let highestEducation: School = .university
 print("저의 최종학력은 \(highestEducation.rawValue) 졸업입니다. ")
+
+// ------------------- //
+// 조건문
+// ------------------- //
+
+
+// if 조건문
+let someInteger = 10
+
+if someInteger == 100{
+    print("100점")
+}
+
+if someInteger == 100{
+    print("\(someInteger)점")
+}else{
+    print("100점 만점에 \(someInteger)점")
+}
+
+if someInteger < 100{
+    print("100 미만")
+}else if someInteger > 100{
+    print("100 초과")
+}else{
+    print("100")
+}
+
