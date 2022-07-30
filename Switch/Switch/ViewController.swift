@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         let avg = Double(sum)/3
         
         if korScore > 100 || engScore > 100 || matScore > 100 || korScore < 0 || engScore < 0 || matScore < 0 {
-            lblGrade.text = "점수를 잘못 입력했습니다. "
+            lblGrade.text = "점수는 0과 100사이 값이어야 합니다. "
         } else{
             switch avg{
             case 90...100:
@@ -46,6 +46,5 @@ class ViewController: UIViewController {
             }
         }
     }
-    
 }
 
