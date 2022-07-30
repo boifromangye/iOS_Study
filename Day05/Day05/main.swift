@@ -254,3 +254,29 @@ print("수학 : \(mat)")
 print("총점 : \(sum)")
 print("평균 : \(avg)")
 print("점수 등급은 \(grade)입니다.")
+
+// Scope
+
+var a = 1000
+var b = 2000
+var c: Int
+var bo = true
+print("main 1:", a, b, bo)
+
+if !bo {
+    let aa = 111
+    b += 1
+    c = 99
+    
+    print("if 1:", a, aa, b, c)
+}else{
+//    print("else 1:",a,aa)
+    let aa = 5678
+    print("else 1:",a,aa)
+    a += 10
+    print("else 2:",a)
+    c = 77
+}
+
+//print("main 2:", a, b, aa, c)
+print("main 2:", a, b, c)
