@@ -112,3 +112,18 @@ if someInteger < 100{
     print("100")
 }
 
+// Tuple
+var isCar = true
+var isNew = true
+
+if isCar, isNew{ // == if isCar && isNew{
+    print("New Car")
+}
+
+isNew = false
+
+if isCar, isNew{
+    print("New Car")
+}else{
+    print("Old Car")
+}
