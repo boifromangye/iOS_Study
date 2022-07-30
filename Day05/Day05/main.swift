@@ -362,3 +362,31 @@ for string in strings{
 for string in strings where string.starts(with: "F"){
     print(string)
 }
+
+// break
+for string in strings{
+    if string.starts(with: "T"){
+        break
+    }
+    print(string)
+}
+
+// continue
+for string in strings{
+    if string.starts(with: "F"){
+        continue
+    }
+    print(string)
+}
+
+var arr: [Int] = []
+
+for i in 1...100{
+    if i % 2 == 1{
+        continue
+    }
+    arr.append(i)
+}
+
+print(arr)
+
