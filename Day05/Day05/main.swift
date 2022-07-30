@@ -67,7 +67,7 @@ print(farmAnimals.isSuperset(of: houseAnimals))
 print(farmAnimals.isDisjoint(with: cityAnimals))
 
 /*
-열거형(Enumerate)
+ 열거형(Enumerate)
  - 연관된 항목들을 묶어서 표현할 수 있는 타입
  - 배열, 딕셔너리, 셋과는 다르게 프로그래머가 정의해준 항목값 외에는 추가, 수정이 불가
  - 분석에서 사용하는 용어인 범주(category)와 동일한 의미
@@ -127,3 +127,124 @@ if isCar, isNew{
 }else{
     print("Old Car")
 }
+
+// Switch 조건문
+// 범위연산자를 활용하면 더 쉽고 유용하다.
+
+// Before using witch statement
+let personAge = 14
+
+if personAge < 1{
+    print("BABY")
+}else if personAge < 3{
+    print("Toddler")
+}else if personAge < 5{
+    print("preschooler")
+}else if personAge < 13{
+    print("gradeschooler")
+}else if personAge < 18{
+    print("teenager")
+}else{
+    print("Adult")
+}
+
+// After using witch statement
+switch personAge{
+case 0..<1: print("BABY")
+case 1..<3: print("Toddler")
+case 3..<5: print("preschooler")
+case 5..<13: print("gradeschooler")
+case 0..<1: print("teenager")
+default: print("Adult")
+}
+
+// ------------------------------------------------
+let someCharacter: Character = "z"
+
+switch someCharacter{
+case "a":
+    print("The first letter of the alphabet.")
+case "z":
+    print("The last letter of the alphabet.")
+default:
+    print("Some other character")
+}
+
+print(someInteger)
+
+switch someInteger{
+case 0:
+    print("ZERO")
+case 1..<100:
+    print("1~99")
+case 100:
+    print("100")
+case 101...Int.max:
+    print("Over 100")
+default:
+    print("Unknown")
+}
+
+switch someCharacter{
+case "z", "Z":
+    print("The letter Z")
+default:
+    print("Some other character")
+}
+
+// Tuple 사용하기
+let somePoint = (1,1)
+
+switch somePoint{
+case (0, 0):
+    print("\(somePoint) is at the origin.")
+case (_, 0):
+    print("\(somePoint) is on the x-axis.")
+case (0, _):
+    print("\(somePoint) is on the y-axis.")
+case(-2...2, -2...2):
+    print("\(somePoint) is in the box.")
+default:
+    print("\(somePoint)")
+}
+
+/*
+ 직급별 월급을 계산하세요.
+ - 부장 : 50%, 과장 : 30%, 대리 : 20%, 사원 : 10%
+ - 월급 : 기본급 + 기본급 * 보너스
+ */
+
+let pos = "과장"
+let basic = 300
+var bonus: Double
+
+switch pos{
+case "부장":
+    bonus = 0.5
+case "과장":
+    bonus = 0.3
+case "대리":
+    bonus = 0.2
+default:
+    bonus = 0.1
+}
+print("\(pos) \(basic) : \(Int(Double(basic) * (1 + bonus)))만원")
+
+// 이름, 국어, 영어, 수학에 대한 총점, 평균, 등급 출력
+let name = "Kim"
+let kor = 91
+let eng = 97
+let mat = 95
+let sum = kor + eng + mat
+let avg = sum / 3
+let grade: String
+
+switch avg{
+case 90...100: grade = "수"
+case 80..<90: grade = "우"
+case 70..<80: grade = "미"
+case 60..<70: grade = "양"
+default: grade = "가"
+}
+
+print("이름 : \(name)\n국어 : \(kor)\n영어 : \(eng)\n수학 : \(mat)\n총점 : \(sum)\n평균 : \(avg)\n\n점수 등급은 \(grade)입니다.")
