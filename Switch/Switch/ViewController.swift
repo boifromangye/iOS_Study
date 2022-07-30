@@ -24,7 +24,27 @@ class ViewController: UIViewController {
         guard let engScore = Int(tfEnglishScore.text!) else { return lblGrade.text = "영어 점수를 입력하세요." }
         guard let matScore = Int(tfMathScore.text!) else { return lblGrade.text = "수학 점수를 입력하세요." }
 
-
+        let sum = korScore + engScore + matScore
+        let avg = Double(sum)/3
+        
+        if korScore > 100 || engScore > 100 || matScore > 100 || korScore < 0 || engScore < 0 || matScore < 0 {
+            lblGrade.text = "점수를 잘못 입력했습니다. "
+        } else{
+            switch avg{
+            case 90...100:
+                lblGrade.text = "평균은 \(String(format: "%.2f", avg))이고 등급은 수입니다."
+            case 80..<90:
+                lblGrade.text = "평균은 \(String(format: "%.2f", avg))이고 등급은 우입니다."
+            case 70..<80:
+                lblGrade.text = "평균은 \(String(format: "%.2f", avg))이고 등급은 미입니다."
+            case 60..<70:
+                lblGrade.text = "평균은 \(String(format: "%.2f", avg))이고 등급은 양입니다."
+            case 0..<60:
+                lblGrade.text = "평균은 \(String(format: "%.2f", avg))이고 등급은 가입니다."
+            default:
+                lblGrade.text = "점수를 잘못 입력했습니다. "
+            }
+        }
     }
     
 }
