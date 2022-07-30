@@ -247,4 +247,10 @@ case 60..<70: grade = "양"
 default: grade = "가"
 }
 
-print("이름 : \(name)\n국어 : \(kor)\n영어 : \(eng)\n수학 : \(mat)\n총점 : \(sum)\n평균 : \(avg)\n\n점수 등급은 \(grade)입니다.")
+print("이름 : \(name)")
+print("국어 : \(kor)")
+print("영어 : \(eng)")
+print("수학 : \(mat)")
+print("총점 : \(sum)")
+print("평균 : \(avg)")
+print("점수 등급은 \(grade)입니다.")
