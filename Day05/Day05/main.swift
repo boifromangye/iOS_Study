@@ -303,3 +303,57 @@ case .college, .university:
 case .graduate:
     print("최종학력은 대학원입니다.")
 }
+
+// 반복문
+// For-In문(For-In loops)
+let names = ["Kwon", "Kim", "Park", "Lee"]
+print(names[0])
+
+for name in names{
+    print("Hello, \(name)!")
+}
+
+for (index, text) in names.enumerated(){
+    print("The name at index \(index) is \(text)")
+}
+
+let numberOfLegs: [String:Int] = ["spider":8, "ant":6, "cat":4]
+
+for (animalName, legCount) in numberOfLegs{
+    print("\(animalName)s have \(legCount) legs.")
+}
+
+for idx in 1...5{
+    print("\(idx) times 5 is \(idx*5).")
+}
+
+let seq = 1...5
+for idx in seq{
+    print("\(idx) times 5 is \(idx*5).")
+}
+for idx in seq.reversed(){
+    print("\(idx) times 5 is \(idx*5).")
+}
+
+let minutes = 60
+let minuteInterval = 5
+
+for tickMark in stride(from: 0, to: minutes, by: minuteInterval){
+    print(tickMark)
+}
+
+for tickMark in stride(from: 0, through: minutes, by: minuteInterval){
+    print(tickMark)
+}
+
+for tickMark in stride(from: minutes, through: 0, by: -5){
+    print(tickMark)
+}
+
+let strings = ["First String", "Second String", "Third String", "Fourth String"]
+
+for string in strings{
+    if string.starts(with: "F"){
+        print(string)
+    }
+}
