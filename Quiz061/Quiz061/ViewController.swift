@@ -44,8 +44,6 @@ class ViewController: UIViewController {
     func checkCnt() {
         if cnt <= 0 {
             cnt = imgArr.count
-        }
-        if cntPre <= 1 {
             cntPre = imgArr.count+1
         }
     }
