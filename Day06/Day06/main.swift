@@ -84,3 +84,36 @@ func sayHelloWorld2(i: Int){
 }
 
 sayHelloWorld2(i: 3)
+
+// 매개변수의 기본값
+
+func greeting(friend: String, me: String = "Kwon"){
+    print("Hello \(friend)! I'm \(me).")
+}
+
+greeting(friend: "Kim", me: "Kwon")
+greeting(friend: "Park")
+
+func greeting2(friend: String = "Lee", me: String = "Kwon"){
+    print("Hello \(friend)! I'm \(me).")
+}
+
+greeting2()
+
+// 가변 매개변수
+func sayHelloToFriends(me: String, friends: String...) -> String{
+    return "Hello \(friends)! I'm \(me)."
+}
+
+print(sayHelloToFriends(me: "Kwon", friends: "Lee", "Park", "Kim"))
+
+// 복수의 값을 반환하는 함수
+// Tuple을 함수의 반환값으로 사용
+
+func getCountry() -> (dialCode: Int, isoCode: String, name: String){
+    let country = (dialCode: 82, isoCode: "KR", name: "KOREA")
+    return country
+}
+
+let ret = getCountry()
+print(ret.dialCode)
