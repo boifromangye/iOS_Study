@@ -20,10 +20,21 @@ class ViewController: UIViewController {
 
     @IBAction func btnCal(_ sender: UIButton) {
         tvResult.text.removeAll()
-
-        guard let col = Int(tfNum.text!) else { return }
-        for row in 1...9 {
-            tvResult.text += "\(col) X \(row) = \(col * row)\n"
+        let check = checkNil()
+        if check {
+            guard let col = Int(tfNum.text!) else { return }
+            for row in 1...9 {
+                tvResult.text += "\(col) X \(row) = \(col * row)\n"
+            }
+        }
+    }
+    
+    func checkNil() -> Bool{
+        let check = tfNum.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if check.isEmpty{
+            return false
+        }else{
+            return true
         }
     }
 }
