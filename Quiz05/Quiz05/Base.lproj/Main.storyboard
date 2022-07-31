@@ -31,7 +31,7 @@
                                 <rect key="frame" x="128" y="198" width="100" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="여기" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xV4-Wz-elO">
                                 <rect key="frame" x="114" y="363" width="200" height="200"/>
