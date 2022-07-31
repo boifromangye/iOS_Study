@@ -65,6 +65,7 @@ class ViewController: UIViewController {
         tfSubR.text?.removeAll()
         tfMulR.text?.removeAll()
         tfDivR.text?.removeAll()
+        tfNum1.becomeFirstResponder()
     }
     
     @IBAction func swithAddR(_ sender: UISwitch) {
