@@ -41,10 +41,10 @@ print("Enter an integer(0~9) :", terminator: " ")
 var inputNum = Int(readLine()!)!
 var sum = 0
 
-while true{
-    if inputNum == 0{
-        break
-    }
+while inputNum != 0{
+//    if inputNum == 0{
+//        break
+//    }
     sum += inputNum % 10
     inputNum /= 10
 }
