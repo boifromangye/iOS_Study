@@ -21,7 +21,9 @@ class ViewController: UIViewController {
         let check = checkNil()
         if check {
             tvMsg.text += tfMsg.text! + "\n"
-        }    }
+            tfMsg.text?.removeAll()
+        }
+    }
     
     @IBAction func btnEmoji(_ sender: UIButton) {
         tfMsg.text! += "⚽️"
