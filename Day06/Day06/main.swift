@@ -117,3 +117,33 @@ func getCountry() -> (dialCode: Int, isoCode: String, name: String){
 
 let ret = getCountry()
 print(ret.dialCode)
+
+// Overloading : 함수의 이름은 중복돼도 parameter 개수로 구분
+
+// 도형의 면적, 둘레를 구하는 함수 구현
+
+// circle
+func shape(_ r: Double){
+    let pi = 3.14
+    let area = pi*r*r
+    let border = 2*pi*r
+    print("Circle : \(area), \(border)")
+}
+
+// rectangle
+func shape(_ w: Int, _ h: Int){
+    let area = w*h
+    let border = 2*(w+h)
+    print("Rectangle : \(area), \(border)")
+}
+
+// triangle
+func shape(_ w: Int, _ h: Int, _ l: Int){
+    let area = w*h/2
+    let border = w+h+l
+    print("R-Triangle : \(area), \(border)")
+}
+
+shape(5) // Circle
+shape(5, 6) // Rectangle
+shape(3, 4, 5) // R-triangle
