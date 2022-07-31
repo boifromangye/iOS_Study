@@ -14,17 +14,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        imgView.image = UIImage(named: "lamp_on")
     }
 
     @IBAction func switchResize(_ sender: UISwitch) {
         switch sender.isOn{
         case true:  lblLamp.text = "전구 축소"
-            imgView.image = UIImage(named: "")
-        default: lblLamp.text = "전구 확대"
+                    imgView.frame.size = CGSize(width: imgView.frame.width * 2, height: imgView.frame.height * 2)
+        default:    lblLamp.text = "전구 확대"
+                    imgView.frame.size = CGSize(width: imgView.frame.width / 2, height: imgView.frame.height / 2)
         }
     }
     
     @IBAction func switchOnOff(_ sender: UISwitch) {
+        switch sender.isOn{
+        case true: imgView.image = UIImage(named: "lamp_on")
+        default: imgView.image = UIImage(named: "lamp_off")
+        }
     }
 }
 
