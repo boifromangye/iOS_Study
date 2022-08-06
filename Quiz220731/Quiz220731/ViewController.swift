@@ -31,19 +31,22 @@ class ViewController: UIViewController {
     @IBAction func btnCal(_ sender: UIButton) {
         self.view.endEditing(true)
         
-        if tfNum1.text!.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || tfNum2.text!.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            tfNum1.becomeFirstResponder() // 커서 위치 조정
-        }
-        else {
-            let num1 : Int = Int(tfNum1.text!)!
-            let num2 : Int = Int(tfNum2.text!)!
-            addR = num1 + num2
-            subR = num1 - num2
-            mulR = num1 * num2
-            
+        let num1 = Int(tfNum1.text!) ?? 0
+        let num2 : Int = Int(tfNum2.text!) ?? 0
+        addR = num1 + num2
+        subR = num1 - num2
+        mulR = num1 * num2
+        
+        if switchAdd.isOn {
             tfAddR.text! = "\(addR)"
+        }
+        if switchSub.isOn {
             tfSubR.text! = "\(subR)"
+        }
+        if switchMul.isOn {
             tfMulR.text! = "\(mulR)"
+        }
+        if switchDiv.isOn {
             if num2 == 0 {
                 tfDivR.text = "N/A"
             }
