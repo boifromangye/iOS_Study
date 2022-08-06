@@ -215,3 +215,66 @@ let sh3: Shape = Shape()
 sh1.input(5)
 sh2.input(5, 6)
 sh3.input(3, 4, 5)
+
+
+// Class 생성자
+
+class Shape1{
+    var area = 0.0
+    let pi = 3.14
+    
+    init(){ // 생성자
+        print("계산 시작!")
+    }
+    
+    init(radius: Double){
+        area = radius*radius*pi
+        result()
+    }
+    
+    func input(_ r: Double){
+        area = r*r*pi
+        result()
+    }
+    
+    func result(){
+        print("원의 면적은 \(Int(area))입니다. ")
+    }
+}
+
+let sh4: Shape1 = Shape1()
+sh4.input(5)
+
+let sh5: Shape1 = Shape1(radius: 5)
+
+class Shape2{
+    var kind = ""
+    var area = 0.0
+    let pi = 3.14
+    
+    init(_ r: Double){
+        kind = "원"
+        area = r*r*pi
+        result()
+    }
+    
+    init(_ w: Double, _ h: Double){
+        kind = "직사각형"
+        area = w*h
+        result()
+    }
+    
+    init(_ w: Double, _ h: Double, _ l: Double){
+        kind = "직각삼각형"
+        area = w*h/2
+        result()
+    }
+    
+    func result(){
+        print("\(kind)의 면적은 \(Int(area))입니다. ")
+    }
+}
+
+let sh6: Shape2 = Shape2(5)
+let sh7: Shape2 = Shape2(5, 6)
+let sh8: Shape2 = Shape2(3, 4, 5)
