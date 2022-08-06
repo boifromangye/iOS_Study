@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblFileName: UILabel!
     @IBOutlet weak var imgFlower: UIImageView!
     let imgArr = ["flower_01", "flower_02", "flower_03", "flower_04", "flower_05", "flower_06"]
-    var interval = 3.0
+    var interval = 0.1
     let timeSelector: Selector = #selector(ViewController.updateTime)
     var cnt = 0
 
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         let formatter = DateFormatter()
         
         formatter.locale = Locale(identifier: "ko")
-        formatter.dateFormat = "yyyy-MM-dd EEE a hh:mm:ss"
+        formatter.dateFormat = "a hh:mm:ss"
         
         cnt += 1
         displayImg()
