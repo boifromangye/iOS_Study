@@ -20,7 +20,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func changeDatePicker(_ sender: UIDatePicker) {
+        let datePickerView = sender
+        let formatter = DateFormatter()
         
+        formatter.locale = Locale(identifier: "ko")
+        formatter.dateFormat = "yyyy-MM-dd EEE a hh:mm:ss"
+        lblPickerTime.text = "선택 시각 : \(formatter.string(from: datePickerView.date))"
     }
     
     // Async Task로 1초당 1번씩 구동
