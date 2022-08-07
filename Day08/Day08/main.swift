@@ -22,3 +22,20 @@ extension Int{
 }
 
 print(1.isEven)
+
+//Closure: 이름이 없는 함수
+
+// Function
+func sumFunction(a: Int, b: Int) -> Int{
+    return (a+b)
+}
+
+var sumResult: Int = sumFunction(a: 10, b: 20)
+print(sumResult)
+
+// Closure
+var sumClosure: (Int, Int) -> Int = {(a: Int, b: Int) -> Int in
+    return a+b
+}
+sumResult = sumClosure(10, 30)
+print(sumResult)
