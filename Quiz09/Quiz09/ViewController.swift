@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var pickerDan: UIPickerView!
     @IBOutlet weak var tvResult: UITextView!
-    let dans: [Int] = [2, 3, 4, 5, 6, 7, 8, 9]
+    let dans = [Int](2...9) // 범위
     
     override func viewDidLoad() {
         super.viewDidLoad()
