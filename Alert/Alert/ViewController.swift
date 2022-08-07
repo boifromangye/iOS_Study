@@ -54,9 +54,13 @@ class ViewController: UIViewController {
     
     @IBAction func btnRemove(_ sender: UIButton) {
         if imgLamp.image == UIImage(named: "lamp_remove"){
-            let alertAlreadyRemoved = UIAlertController(title: "경고", message: "현재 REMOVED 상태입니다.", preferredStyle: .alert)
-            let actionOK = UIAlertAction(title: "네, 알겠습니다.", style: .default, handler: nil)
-            alertAlreadyRemoved.addAction(actionOK)
+            let alertAlreadyRemoved = UIAlertController(title: "복구", message: "램프를 복구하시겠습니까?", preferredStyle: .alert)
+            let actionYes = UIAlertAction(title: "네", style: .default, handler: {ACTION in
+                self.imgLamp.image = UIImage(named: "lamp_off")
+        })
+            let actionNo = UIAlertAction(title: "아니오", style: .destructive, handler: nil)
+            alertAlreadyRemoved.addAction(actionYes)
+            alertAlreadyRemoved.addAction(actionNo)
             present(alertAlreadyRemoved, animated: true, completion: nil)
         }else{
             let alertRemoving = UIAlertController(title: "램프 깨기", message: "램프를 깨겠습니까?", preferredStyle: .alert)
