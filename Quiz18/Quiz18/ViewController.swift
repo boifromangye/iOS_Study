@@ -11,12 +11,15 @@ import WebKit
 class ViewController: UIViewController {
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var myWebView: WKWebView!
+    @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
     let arrUrl = ["www.naver.com", "www.google.com", "www.daum.net", "www.nate.com", "www.cnn.com", "www.realmadrid.com", "www.kakao.com", "www.apple.com"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        loadWebPage(url: arrUrl[0])
+        pickerView.delegate = self
+        myWebView.navigationDelegate = self
+        loadWebPage(url: "https://" + arrUrl[0])
     }
     
     func loadWebPage(url: String){
@@ -45,5 +48,23 @@ extension ViewController: UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let myUrl = arrUrl[row]
         return myUrl
+    }
+}
+
+extension ViewController: WKNavigationDelegate{
+    // Start Indicator
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        myActivityIndicator.startAnimating()
+        myActivityIndicator.isHidden = false
+    }
+    // Finish Indicator
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        myActivityIndicator.stopAnimating()
+        myActivityIndicator.isHidden = true
+    }
+    // Error
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        myActivityIndicator.stopAnimating()
+        myActivityIndicator.isHidden = true
     }
 }
