@@ -12,7 +12,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var myWebView: WKWebView!
     @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
-    let arrUrl = ["www.naver.com", "www.google.com", "www.daum.net", "www.nate.com", "www.cnn.com", "www.realmadrid.com", "www.kakao.com", "www.apple.com"]
+    let names = ["네이qj", "구글", "다음", "네이트", "CNN", "레알 마드리드", "카카오", "애플"]
+    let urls = ["www.naver.com", "www.google.com", "www.daum.net", "www.nate.com", "www.cnn.com", "www.realmadrid.com", "www.kakao.com", "www.apple.com/kr"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,7 @@ class ViewController: UIViewController {
         pickerView.dataSource = self
         pickerView.delegate = self
         myWebView.navigationDelegate = self
-        loadWebPage(url: "https://" + arrUrl[0])
+        loadWebPage(url: "https://" + urls[0])
     }
     
     func loadWebPage(url: String){
@@ -36,19 +37,19 @@ extension ViewController: UIPickerViewDataSource{
         return 1
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return arrUrl.count
+        return urls.count
     }
 }
 
 extension ViewController: UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let myUrl = "https://" + arrUrl[row]
+        let myUrl = "https://" + urls[row]
         loadWebPage(url: myUrl)
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let myUrl = arrUrl[row]
-        return myUrl
+        let siteName = names[row]
+        return siteName
     }
 }
 
