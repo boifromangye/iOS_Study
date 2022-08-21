@@ -44,13 +44,12 @@ class ViewController: UIViewController {
             switch swipeGesture.direction{
             case UISwipeGestureRecognizer.Direction.left:
                 pageControl.currentPage += 1
-                setImage()
             case UISwipeGestureRecognizer.Direction.right:
                 pageControl.currentPage -= 1
-                setImage()
             default:
                 break
             }
+            setImage()
         }
     }
     
