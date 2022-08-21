@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         makeSingleTouch()
+        makeDoubleTouch()
         pageControl.numberOfPages = flowers.count
         pageControl.currentPage = 0
         pageControl.currentPageIndicatorTintColor = UIColor.red
@@ -46,6 +47,33 @@ class ViewController: UIViewController {
                 setImage()
             case UISwipeGestureRecognizer.Direction.right:
                 pageControl.currentPage -= 1
+                setImage()
+            default:
+                break
+            }
+        }
+    }
+    
+    func makeDoubleTouch(){
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.respondToSwipeGestureMulti(_ :)))
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+        swipeLeft.numberOfTouchesRequired = 2
+        self.view.addGestureRecognizer(swipeLeft)
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.respondToSwipeGestureMulti(_ :)))
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+        swipeRight.numberOfTouchesRequired = 2
+        self.view.addGestureRecognizer(swipeRight)
+    }
+    
+    @objc func respondToSwipeGestureMulti(_ gesture: UIGestureRecognizer){
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer{
+            switch swipeGesture.direction{
+            case UISwipeGestureRecognizer.Direction.left:
+                pageControl.currentPage = pageControl.numberOfPages-1
+                setImage()
+            case UISwipeGestureRecognizer.Direction.right:
+                pageControl.currentPage = 0
                 setImage()
             default:
                 break
