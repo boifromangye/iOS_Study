@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var myWebView: WKWebView!
     @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
-    let names = ["네이qj", "구글", "다음", "네이트", "CNN", "레알 마드리드", "카카오", "애플"]
+    let names = ["네이버", "구글", "다음", "네이트", "CNN", "레알 마드리드", "카카오", "애플"]
     let urls = ["www.naver.com", "www.google.com", "www.daum.net", "www.nate.com", "www.cnn.com", "www.realmadrid.com", "www.kakao.com", "www.apple.com/kr"]
     
     override func viewDidLoad() {
