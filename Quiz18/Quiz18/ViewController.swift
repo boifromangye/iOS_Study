@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        pickerView.dataSource = self
         pickerView.delegate = self
         myWebView.navigationDelegate = self
         loadWebPage(url: "https://" + arrUrl[0])
