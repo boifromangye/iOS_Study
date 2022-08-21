@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         pageControl.numberOfPages = 10
-        pageControl.pageIndicatorTintColor = UIColor.gray
+        pageControl.pageIndicatorTintColor = UIColor.lightGray
         setNumber(pageControl.currentPage+1)
     }
 
