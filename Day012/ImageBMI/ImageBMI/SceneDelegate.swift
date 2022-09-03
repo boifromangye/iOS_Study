@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  ImageBMI
 //
-//  Created by Kenny on 2022/06/02.
+//  Created by 권태우 on 2022/08/28.
 //
 
 import UIKit
