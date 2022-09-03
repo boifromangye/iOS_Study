@@ -40,7 +40,15 @@ class ViewController: UIViewController {
     }
     
     func errorAlert(){
-        lblResult.text = "숫자를 입력해 주세요!"
+        let testAlert = UIAlertController(title: "오류", message: "숫자를 입력해 주세요!", preferredStyle: .alert)
+
+        let actionDestructive = UIAlertAction(title: "확인", style: .destructive, handler: {ACTION in
+            self.tfHeight.becomeFirstResponder()
+        })
+        
+        testAlert.addAction(actionDestructive)
+        
+        present(testAlert, animated: true, completion: nil)
     }
     
     func calcBMI(){
