@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Quiz02
 //
-//  Created by 권태우 on 2022/08/27.
+//  Created by TJ on 2022/08/27.
 //
 
 import UIKit
